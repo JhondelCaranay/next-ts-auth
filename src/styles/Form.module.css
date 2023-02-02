@@ -1,0 +1,41 @@
+.input_group {
+  @apply flex rounded-xl border;
+  position: relative;
+}
+
+.input_text {
+  @apply w-full rounded-xl border bg-slate-50 py-4 px-6;
+  @apply border-none focus:outline-none;
+}
+
+.button {
+  @apply w-full rounded-md border bg-gradient-to-r from-blue-500 to-indigo-500;
+  @apply py-3 text-lg text-gray-50;
+}
+
+.button:hover {
+  @apply border-blue-500 bg-gradient-to-r from-gray-50 to-gray-100;
+  @apply border text-gray-700;
+}
+
+.button:disabled {
+  @apply cursor-not-allowed;
+}
+
+.button_custom {
+  @apply flex w-full items-center justify-center gap-2 border py-3 hover:bg-gray-200;
+}
+
+.input_text + * {
+  color: #cbd5e1;
+}
+
+.input_text:focus + * {
+  color: #6366f1;
+}
+
+/* type not em,ail and placeholder not Username */
+.input_text:not([type="email"]) ~ span:hover * {
+  color: #6366f1;
+  cursor: pointer;
+}
